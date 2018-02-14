@@ -1,0 +1,10 @@
+newmtl Convertible_mat1
+illum 
+Ns 13770
+	d 1
+	illum 2
+	Kd 1.0 1.0 1.0
+	Ks 0.701961 0.701961 0.701961
+	Ka 1.0 1.0 1.0
+	map_Kd Convertible_BaseColor.png
+

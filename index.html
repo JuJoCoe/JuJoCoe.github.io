@@ -2,6 +2,7 @@
 <html>
 <head>
     <script src="libs/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-event-set-component@^4.0.0/dist/aframe-event-set-component.min.js"></script>
 
     <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v1.14.0/dist/aframe-extras.min.js"></script>
 </head>
@@ -10,56 +11,91 @@
 
     <!---Camera Controls--->
 
-    <a-entity position="0 0 0">
         <a-camera universal-controls>
-            <a-entity raycaster="far: 150; objects: .intersectable" cursor geometry="primitive: ring; radiusOuter: 0.015;
+            <a-entity cursor="far: 150; objects: .intersectable" cursor geometry="primitive: ring; radiusOuter: 0.015;
                               radiusInner: 0.01; segmentsTheta: 32" material="color: #283644; shader: flat" position="0 0 -0.75"></a-entity>
         </a-camera>
-    </a-entity>
+
     <!---sky color--->
-    <a-sky color="#ECECEC"></a-sky>
+    <a-sky color="#6879ec"></a-sky>
 
     <!---Ceiling--->
-    <a-entity static-body geometry="primitive: box; depth: 33; height: 0.1; width: 50" position="0 6 3.346" material="shader: flat; side: double; opacity: 1;
+    <a-entity static-body geometry="primitive: box; depth: 24; height: 0.1; width: 50" position="0 6 -1.639" material="shader: flat; side: double; opacity: 1;
 src: url(images/newceiling.jpg); repeat: 12 5"></a-entity>
 
     <!---Floor--->
-    <a-entity static-body geometry="primitive: box; depth: 33; height: 0.1; width: 50" position="0 -0.5 3.346" material="shader: flat; side: double; opacity: 1;
+    <a-entity static-body geometry="primitive: box; depth: 24; height: 0.1; width: 50" position="0 -0.5 -1.639" material="shader: flat; side: double; opacity: 1;
 src: url(images/carpet.jpg); repeat: 20 12"></a-entity>
 
     <!---Outter Walls--->
-    <a-entity static-body geometry="primitive: box; depth: 1; height: 20; width: 33" position="-25.000 6.5 3.114" rotation="0 90 0" material="shader: standard;
-roughness: 1; src: url(images/outerwall.jpg); repeat: 2 2"></a-entity>
+    <a-entity static-body="" geometry="width:23;height:7" position="-25 2.933 -2"
+              rotation="0 90 0" material="repeat:1 1;roughness:1;src:images/outerwall.jpg"></a-entity>
 
-    <a-entity static-body geometry="primitive: box; depth: 1; height: 20; width: 50" position="-0.117 6.5 19.341" rotation="0 180 0" material="shader: standard;
-roughness: 1; src: url(images/outerwall.jpg); repeat: 2 2"></a-entity>
+    <a-entity static-body="" geometry="height:7;width:50" position="-0.117 2.933 9.584"
+              rotation="0 180 0" material="repeat:2 1;roughness:1;src:images/outerwall.jpg"></a-entity>
 
-    <a-entity static-body geometry="primitive: box; depth: 1; height: 20; width: 33" position="25.000 6.5 3.114" rotation="0 90 0" material="shader: standard;
-roughness: 1; src: url(images/outerwall.jpg); repeat: 2 2"></a-entity>
+    <a-entity static-body="" geometry="height:7;width:23" position="25 2.933 -2"
+              rotation="0 90 0" material="repeat:1 1;roughness:1;src:images/outerwall.jpg"></a-entity>
 
-    <a-entity static-body geometry="primitive: box; depth: 1; height: 20; width: 50" position="0.117 6.5 -13.314" rotation="0 180 0" material="shader: standard;
-roughness: 1; src: url(images/outerwall.jpg); repeat: 2 2"></a-entity>
+     <a-entity static-body="" geometry="width:20;height:7" position="15.558 2.933 -13.314"
+               rotation="0 180 0" material="repeat:2 1;roughness:1;src:images/outerwall.jpg"></a-entity>
+
+    <a-entity static-body="" geometry="width:17;height:7" position="-5.017 2.933 -13.314"
+              rotation="0 180 0" material="repeat:2 1;roughness:1;src:images/outerwall.jpg"></a-entity>
+
+    <a-entity static-body="" geometry="width:6;height:7" position="-22.556 2.933 -13.314"
+              rotation="0 180 0" material="repeat:2 1;roughness:1;src:images/outerwall.jpg"></a-entity>
+
+
+    <a-entity static-body="" geometry="height:2.7;depth:0.95;width:5" position="4.465 5.091 -13.314"
+              material="roughness:1;src:images/outerwall.jpg"></a-entity>
 
     <!---inner walls bedroom--->
-    <a-entity static-body geometry="primitive: box; depth: 1; height: 20; width: 27" position="7.986 6.5 6.015" rotation="0 90 0" material="shader: standard;
-roughness: 1; src: url(images/outerwall.jpg); repeat: 2 2"></a-entity>
+    <a-entity static-body="" geometry="width:19;height:7" position="7.986 2.933 0.53"
+              rotation="0 90 0" material="repeat:1 1;roughness:1;src:images/outerwall.jpg"></a-entity>
 
-    <a-entity static-body="" geometry="height:20;width:13" position="16.859 6.5 9.584" rotation="0 180.02333923010465 0"
-              material="repeat:2 2;roughness:1;src:images/outerwall.jpg" scale="1.375 1 1"></a-entity>
+    <a-entity static-body="" geometry="depth:0.95;height:2.7;width:5" position="7.986 5.091 -10.73"
+              material="roughness:1;src:images/outerwall.jpg" rotation="0 90 0"></a-entity>
+
+    <a-entity static-body="" geometry="width:2;height:7" position="7.986 2.933 -11.963"
+              rotation="0 90 0" material="roughness:1;src:images/outerwall.jpg"></a-entity>
+
+
 
     <!---Car Room--->
-    <a-entity static-body geometry="primitive: box; depth: 1; height: 20; width: 14" position="-9.302 6.5 12.750" rotation="0 90 0" material="shader: standard;
-roughness: 1; src: url(images/outerwall.jpg); repeat: 2 2"></a-entity>
+    <a-entity static-body geometry="primitive: box; depth: 1; height: 7; width: 7" position="-9.302 2.933 6.916" rotation="0 90 0" material="shader: standard;
+roughness: 1; src: url(images/outerwall.jpg); repeat: 1 1"></a-entity>
 
-    <a-entity static-body="" geometry="height:20;width:13" position="-9.302 6.5 -6.685" rotation="1.4323944878270582 90.81381052823548 0"
-              material="repeat:2 2;roughness:1;src:images/outerwall.jpg"></a-entity>
+    <a-entity static-body="" geometry="height:7;width:13" position="-9.302 2.933 -6.685" rotation="0 90 0"
+              material="repeat:1 1;roughness:1;src:images/outerwall.jpg"></a-entity>
+
+<!--- Outdoors --->
+    <!--- Grass --->
+    <a-entity static-body="" geometry="depth:24;height:0.1;width:50" position="0 -0.5 -25.695"
+              material="repeat:20 12;shader:flat;side:double;src:images/grass.jpg"></a-entity>
+
+    <a-entity static-body="" geometry="height:30;width:50" position="-0.117 13.675 -37.877"
+              rotation="0 180 0" material="repeat:1 1;roughness:1;src:images/forest.jpg"></a-entity>
+
+    <!--- Driveway --->
+    <a-entity static-body="" geometry="width:6;depth:24;height:0.1" position="-16.501 -0.495 -25.647"
+              material="repeat:20 12;shader:flat;side:double;src:images/asphalt.jpg"></a-entity>
 
 
 
-    <!---Old timer TV --->
-    <a-obj-model src="assets/oldtv.obj" mtl="assets/oldtv.mtl" position="-0.963 2.698 6" scale="1.00 1.00 1.00"></a-obj-model>
+
+
+
+
+
+
 
 <!--- Bedroom--->
+    <!---Carpet-->
+    <a-entity static-body="" geometry="height:0.101;depth:24;width:16.5" position="16.266 -0.5 -1.104"
+              material="repeat:20 12;shader:flat;side:double;src:images/bedroomcarpet.jpg"></a-entity>
+
+
     <!---Bed--->
     <a-gltf-model src="assets/bed_agape/scene.gltf" position="21.241 -0.435 6.393"
                   scale="0.025 0.025 0.025" gltf-model="assets/bed_agape/scene.gltf"></a-gltf-model>
@@ -79,6 +115,219 @@ roughness: 1; src: url(images/outerwall.jpg); repeat: 2 2"></a-entity>
     <!---Computer Chair--->
     <a-gltf-model src="assets/m_chair/scene.gltf" position="12.646 1.052 0.982"
                   scale="0.025 0.025 0.025" gltf-model="assets/m_chair/scene.gltf"></a-gltf-model>
+
+    <!--- TV --->
+    <a-obj-model src="assets/tv1.obj" mtl="assets/tv1.mtl" position="21.846 0.744 -9.531" scale="0.01 0.01 0.01"
+                 rotation="-90 135 0" material=""></a-obj-model>
+    <a-gltf-model src="assets/wood_table/scene.gltf" position="21.26 0.075 -10.362" scale="0.254 0.103 0.185"
+                  gltf-model="assets/wood_table/scene.gltf" rotation="0 45 0"></a-gltf-model>
+
+    <!--- Posters --->
+        <!--- Tech Basketball --->
+    <a-entity static-body="" geometry="height:5;width:5" position="16.178 2.931 9.541"
+              material="repeat:1 1;roughness:1;src:images/techbasketball.jpg" scale="1 0.828 1"></a-entity>
+
+
+    <!--- Dresser --->
+    <a-obj-model src="assets/dresser.obj" mtl="assets/dresser.mtl" position="23.057 0.597 -1.971"
+                 rotation="0 180 0" material=""></a-obj-model>
+
+    <!--- Couch --->
+    <a-obj-model src="assets/couch1.obj" mtl="assets/couch1.mtl" scale="3 3 3" position="17.297 0 -5.263"
+                 rotation="0 -45 0" material=""></a-obj-model>
+
+    <!--- Desk Lamp --->
+    <a-obj-model src="assets/desklamp.obj" mtl="assets/desklamp.mtl"
+                 position="9.751 1.964 -0.911" rotation="0 58.097920426265475 0" material=""></a-obj-model>
+
+    <!--- Door --->
+    <a-obj-model id="door1" src="assets/door.obj" mtl="assets/door.mtl" position="8.038 -0.463 -9.936"
+                 scale="0.013 0.013 0.04" material="" rotation="0 90 0" class="intersectable">
+    </a-obj-model>
+    <a-box material="color:tomato;transparent:true;opacity:0" depth="3" height="6" width="1" position="8.038 -0.463 -9.936"
+        event-set__1="_event: click; _target: #door1; position: 9.419 -0.463 -8.324;"
+        event-set__2="_event: click; _target: #door1; rotation: 0 0 0;"></a-box>
+
+    <a-box material="color:tomato;transparent:true;opacity:0" depth="1" height="6" width="3" position="9.419 -0.463 -8.324"
+           event-set__1="_event: click; _target: #door1; position: 8.038 -0.463 -9.936;"
+           event-set__2="_event: click; _target: #door1; rotation: 0 90 0;"></a-box>
+
+
+<!--- Kitchen --->
+    <!--- Stove --->
+    <a-obj-model src="assets/stove.obj" mtl="assets/stove.mtl" scale="0.06 0.06 0.06"
+                 rotation="0 180 0" material="" position="0 -0.397 7.455"></a-obj-model>
+
+    <!--- Counters --->
+    <a-gltf-model src="assets/single_counter/scene.gltf" position="-0.781 -0.397 8.695" rotation="0 90 0"
+                  scale="0.015 0.017 0.015" gltf-model="assets/single_counter/scene.gltf"></a-gltf-model>
+
+    <a-gltf-model src="assets/single_counter/scene.gltf" position="-2.194 -0.397 8.695" rotation="0 90 0"
+                  scale="0.015 0.017 0.015" gltf-model="assets/single_counter/scene.gltf"></a-gltf-model>
+
+    <a-gltf-model src="assets/single_counter/scene.gltf" position="-3.625 -0.397 8.695" rotation="0 90 0"
+                  scale="0.015 0.017 0.015" gltf-model="assets/single_counter/scene.gltf"></a-gltf-model>
+
+    <a-gltf-model src="assets/single_counter/scene.gltf" position="-5.026 -0.397 8.695" rotation="0 90 0"
+                  scale="0.015 0.017 0.015" gltf-model="assets/single_counter/scene.gltf"></a-gltf-model>
+
+    <a-gltf-model src="assets/single_counter/scene.gltf" position="-6.422 -0.397 8.695" rotation="0 90 0"
+                  scale="0.015 0.017 0.015" gltf-model="assets/single_counter/scene.gltf"></a-gltf-model>
+
+    <a-gltf-model src="assets/single_counter/scene.gltf" position="2.246 -0.397 8.695" rotation="0 90 0"
+                  scale="0.015 0.017 0.015" gltf-model="assets/single_counter/scene.gltf"></a-gltf-model>
+
+    <a-gltf-model src="assets/single_counter/scene.gltf" position="3.676 -0.397 8.695" rotation="0 90 0"
+                  scale="0.015 0.017 0.015" gltf-model="assets/single_counter/scene.gltf"></a-gltf-model>
+
+    <a-gltf-model src="assets/single_counter/scene.gltf" position="5.097 -0.397 8.695" rotation="0 90 0"
+                  scale="0.015 0.017 0.015" gltf-model="assets/single_counter/scene.gltf"></a-gltf-model>
+
+    <a-gltf-model src="assets/single_counter/scene.gltf" position="6.538 -0.397 8.695" rotation="0 90 0"
+                  scale="0.015 0.017 0.015" gltf-model="assets/single_counter/scene.gltf"></a-gltf-model>
+
+    <a-gltf-model src="assets/single_counter/scene.gltf" position="7.231 -0.397 -0.876" rotation="0 180 0"
+                  scale="0.015 0.017 0.015" gltf-model="assets/single_counter/scene.gltf"></a-gltf-model>
+
+    <a-gltf-model src="assets/single_counter/scene.gltf" position="7.231 -0.397 0.58" rotation="0 180 0"
+                  scale="0.015 0.017 0.015" gltf-model="assets/single_counter/scene.gltf"></a-gltf-model>
+
+    <!--- Microwave --->
+    <a-obj-model src="assets/microwave.obj" mtl="assets/microwave.mtl" position="-6.279 1.335 8.061"
+                 rotation="0 135 0" scale="0.03 0.03 0.03" material=""></a-obj-model>
+
+    <!--- Fridge --->
+    <a-gltf-model src="assets/fridge/scene.gltf" position="6.391 1.842 2.984"
+                  rotation="0 180 0" scale="0.5 0.5 0.5" gltf-model="assets/fridge/scene.gltf"></a-gltf-model>
+
+    <!--- Dining Table --->
+    <a-gltf-model src="assets/wood_table/scene.gltf" position="-2.987 0.269 1.769"
+                  scale="0.254 0.127 0.169" gltf-model="assets/wood_table/scene.gltf" rotation="0 90 0"></a-gltf-model>
+
+    <!--- Chairs --->
+    <a-obj-model src="assets/chair1.obj" mtl="assets/chair1.mtl" position="-2.00 -0.942 0.869"
+                 rotation="-90 90 0" scale="0.01 0.01 0.01" material=""></a-obj-model>
+
+    <a-obj-model src="assets/chair1.obj" mtl="assets/chair1.mtl" position="-0.246 -0.942 1.752"
+                 rotation="-90 0 0" scale="0.01 0.01 0.01" material=""></a-obj-model>
+
+    <a-obj-model src="assets/chair1.obj" mtl="assets/chair1.mtl" position="-3.874 -0.942 1.752"
+                 rotation="-90 180 0" scale="0.01 0.01 0.01" material=""></a-obj-model>
+
+    <a-obj-model src="assets/chair1.obj" mtl="assets/chair1.mtl" position="-2.00 -0.942 3.085"
+                 rotation="-90 270 0" scale="0.01 0.01 0.01" material=""></a-obj-model>
+
+
+<!--- Living Room --->
+    <!--- Couch --->
+    <a-gltf-model src="assets/leather_sectional_couch/scene.gltf" position="-7.036 -0.498 -4.993" rotation="0 90 0"
+                  scale="0.01 0.01 0.01" gltf-model="assets/leather_sectional_couch/scene.gltf"></a-gltf-model>
+
+    <a-gltf-model src="assets/leather_black_sofa/scene.gltf" position="-0.296 -0.93 -2.315" rotation="0 -135 0"
+                  scale="1.2 1.2 1.2" gltf-model="assets/leather_black_sofa/scene.gltf"></a-gltf-model>
+
+    <!--- TV + Table--->
+    <a-obj-model src="assets/tv1.obj" mtl="assets/tv1.mtl" position="-1.375 0.75 -11.474"
+                 scale="0.01 0.01 0.01" rotation="-90 180 0" material=""></a-obj-model>
+
+    <a-gltf-model src="assets/wood_table/scene.gltf" position="-2.382 0.075 -11.39" scale="0.254 0.103 0.185"
+                  gltf-model="assets/wood_table/scene.gltf" rotation="0 90 0"></a-gltf-model>
+
+    <!--- Door --->
+    <a-obj-model id="door2" src="assets/door.obj" mtl="assets/door.mtl"
+                 position="4.53 -0.463 -13.155" scale="0.013 0.013 0.04" material=""></a-obj-model>
+
+    <a-box material="color:tomato;transparent:true;opacity:0" depth="1" height="6" width="3" position="4.53 -0.463 -13.155"
+           event-set__1="_event: click; _target: #door2; position: 2.994 -0.463 -12.011;"
+           event-set__2="_event: click; _target: #door2; rotation: 0 -90 0;"></a-box>
+
+    <a-box material="color:tomato;transparent:true;opacity:0" depth="3" height="6" width="1" position="2.994 -0.463 -12.011"
+           event-set__1="_event: click; _target: #door2; position: 4.53 -0.463 -13.155;"
+           event-set__2="_event: click; _target: #door2; rotation: 0 0 0;"></a-box>
+
+
+
+<!--- GARAGE --->
+    <!-- Car --->
+    <a-obj-model src="assets/Convertible.obj" mtl="assets/Convertible.mtl"
+                 position="-16.812 -0.625 -0.835" scale="0.9 0.9 0.9" rotation="0 180 0" material=""></a-obj-model>
+
+
+<!--- Lighting --->
+    <a-light type="ambient" color="#222"></a-light>
+
+
+    <!--- Lightbulbs --->
+        <!--- LIVING ROOM -->
+    <a-obj-model src="assets/Lightbulb.obj" mtl="assets/Lightbulb.mtl" position="-1.457 5.901 -7.107"
+                 rotation="180 0 0" scale="0.002 0.002 0.002" material=""></a-obj-model>
+    <a-light type="point" position="-1.457 5.5 -7.00" light="distance:12;color:#fffffb" id="Living_Light1"></a-light>
+    <a-light type="point" position="-1.457 5.5 -7.20" light="distance:12;color:#fffffb" id="Living_Light2"></a-light>
+
+    <a-obj-model src="assets/Lightbulb.obj" mtl="assets/Lightbulb.mtl" position="-1.457 5.901 1.433"
+                 rotation="180 0 0" scale="0.002 0.002 0.002" material=""></a-obj-model>
+    <a-light type="point" position="-1.457 5.5 1.3" light="distance:12;color:#fffffb" id="Living_Light3"></a-light>
+    <a-light type="point" position="-1.457 5.5 1.5" light="distance:12;color:#fffffb" id="Living_Light4"></a-light>
+
+    <a-obj-model src="assets/Lightbulb.obj" mtl="assets/Lightbulb.mtl" position="-16.642 5.901 0.569"
+                 rotation="180 0 0" scale="0.002 0.002 0.002"></a-obj-model>
+    <a-light type="point"  position="-16.642 5.5 0.500" light="distance:12;color:#fffffb" id="Living_Light5"></a-light>
+    <a-light type="point"  position="-16.642 5.5 0.700" light="distance:12;color:#fffffb" id="Living_Light6"></a-light>
+
+            <!--- Light Switch --->
+    <a-obj-model src="assets/lightswitch.obj" mtl="assets/lightswitch.mtl"
+                 position="7.43 1.666 -3.941" rotation="0 90 0" material=""></a-obj-model>
+    <a-box id="box" material="color:tomato;transparent:true;opacity:0"
+           position="7.43 1.666 -3.941" height="1" depth="1" width="1"
+           event-set__1="_event: click; _target: #Living_Light1; distance: 0.01;"
+           event-set__2="_event: click; _target: #Living_Light2; distance: 0.01;"
+           event-set__3="_event: click; _target: #Living_Light3; distance: 0.01;"
+           event-set__4="_event: click; _target: #Living_Light4; distance: 0.01;"
+           event-set__5="_event: click; _target: #Living_Light5; distance: 0.01;"
+           event-set__6="_event: click; _target: #Living_Light6; distance: 0.01;"></a-box>
+
+    <a-obj-model src="assets/lightswitch.obj" mtl="assets/lightswitch.mtl"
+                 position="7.43 1.666 -2.00" rotation="0 90 0" material=""></a-obj-model>
+    <a-box id="box" material="color:tomato;transparent:true;opacity:0"
+           position="7.43 1.666 -2.00" height="1" depth="1" width="1"
+           event-set__1="_event: click; _target: #Living_Light1; distance: 12;"
+           event-set__2="_event: click; _target: #Living_Light2; distance: 12;"
+           event-set__3="_event: click; _target: #Living_Light3; distance: 12;"
+           event-set__4="_event: click; _target: #Living_Light4; distance: 12;"
+           event-set__5="_event: click; _target: #Living_Light5; distance: 12;"
+           event-set__6="_event: click; _target: #Living_Light6; distance: 12;"></a-box>
+
+
+    <!-- BEDROOM -->
+    <a-obj-model src="assets/rooflamp.obj" mtl="assets/rooflamp.mtl"
+                 position="17.288 5.539 3.19" scale="1.5 1.5 1.5" material=""></a-obj-model>
+    <a-light type="point" position="17.288 4.844 3.19" light="distance:12;color:#fffffb" id="Bed_Room1"></a-light>
+
+
+    <a-obj-model src="assets/rooflamp.obj" mtl="assets/rooflamp.mtl"
+                 position="17.288 5.539 -6.754" scale="1.5 1.5 1.5" material=""></a-obj-model>
+    <a-light type="point" position="17.288 4.844 -6.754" light="distance:12;color:#fffffb" id="Bed_Room2"></a-light>
+
+    <!-- Desk Lamp -->
+    <a-light type="point" position="10.056 2.122 -0.752" light="distance:4;color:#fffffb" id="Lamp_Light"></a-light>
+
+    <a-box color="red" position="8.083 1.709 -3.500" scale="1 0.335 0.57"
+           event-set__1="_event: click; _target: #Bed_Room1; color: red;"
+           event-set__2="_event: click; _target: #Bed_Room2; color: red;"
+           event-set__3="_event: click; _target: #Lamp_Light; color: red;"></a-box>
+    <a-box color="blue" position="8.083 1.709 -4.500" scale="1 0.335 0.57"
+           event-set__1="_event: click; _target: #Bed_Room1; color: blue;"
+           event-set__2="_event: click; _target: #Bed_Room2; color: blue;"
+           event-set__3="_event: click; _target: #Lamp_Light; color: blue;"></a-box>
+    <a-box color="green" position="8.083 1.709 -5.500" scale="1 0.335 0.57"
+        event-set__1="_event: click; _target: #Bed_Room1; color: green;"
+        event-set__2="_event: click; _target: #Bed_Room2; color: green;"
+        event-set__3="_event: click; _target: #Lamp_Light; color: green;"></a-box>
+    <a-box color="white" position="8.083 1.709 -6.500" scale="1 0.335 0.57"
+           event-set__1="_event: click; _target: #Bed_Room1; color: #fffffb;"
+           event-set__2="_event: click; _target: #Bed_Room2; color: #fffffb;"
+           event-set__3="_event: click; _target: #Lamp_Light; color: #fffffb;"></a-box>
+
 
 
 
