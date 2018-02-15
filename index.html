@@ -13,9 +13,13 @@
     <!---Camera Controls--->
 
         <a-camera universal-controls>
-            <a-entity cursor="far: 150; objects: .intersectable" cursor geometry="primitive: ring; radiusOuter: 0.015;
-                              radiusInner: 0.01; segmentsTheta: 32" material="color: #283644; shader: flat" position="0 0 -0.75"></a-entity>
+            <a-entity cursor="fuse: true; fuseTimeout: 500;"
+                      position="0 0 -1"
+                      geometry="primitive: ring; radiusOuter: 0.05; radiusInner: 0.02"
+                      material="color: white; shader: flat" >
+            </a-entity>
         </a-camera>
+
 
     <!---sky color--->
     <a-sky color="#6879ec"></a-sky>
@@ -80,8 +84,8 @@ src: url(images/carpet.jpg); repeat: 20 12"></a-entity>
                   gltf-model="assets/alarm_clock/scene.gltf"></a-gltf-model>
 
     <!---Computer Chair--->
-    <a-gltf-model src="assets/m_chair/scene.gltf" position="12.646 1.052 0.982"
-                  scale="0.025 0.025 0.025" gltf-model="assets/m_chair/scene.gltf"></a-gltf-model>
+    <a-obj-model src="assets/chair1.obj" mtl="assets/chair1.mtl" position="12.646 -0.942 0.982"
+                  scale="0.01 0.01 0.01" rotation="-90 0 0"></a-obj-model>
 
     <!--- TV --->
     <a-obj-model src="assets/tv1.obj" mtl="assets/tv1.mtl" position="21.846 0.744 -9.531" scale="0.01 0.01 0.01"
@@ -193,13 +197,13 @@ src: url(images/carpet.jpg); repeat: 20 12"></a-entity>
 
     <!--- Lightbulbs --->
         <!--- LIVING ROOM -->
-    <a-obj-model src="assets/Lightbulb.obj" mtl="assets/Lightbulb.mtl" position="-1.457 5.901 -7.107"
-                 rotation="180 0 0" scale="0.002 0.002 0.002" material=""></a-obj-model>
+    <a-obj-model src="assets/rooflamp.obj" mtl="assets/rooflamp.mtl" position="-1.457 5.901 -7.107"
+                 rotation="0 0 0" scale="1.5 1.5 1.5" material=""></a-obj-model>
     <a-light type="point" position="-1.457 5.5 -7.00" light="distance:12;color:#fffffb" id="Living_Light1"></a-light>
     <a-light type="point" position="-1.457 5.5 -7.20" light="distance:12;color:#fffffb" id="Living_Light2"></a-light>
 
-    <a-obj-model src="assets/Lightbulb.obj" mtl="assets/Lightbulb.mtl" position="-1.457 5.901 1.433"
-                 rotation="180 0 0" scale="0.002 0.002 0.002" material=""></a-obj-model>
+    <a-obj-model src="assets/rooflamp.obj" mtl="assets/rooflamp.mtl" position="-1.457 5.901 1.433"
+                 rotation="0 0 0" scale="1.5 1.5 1.5" material=""></a-obj-model>
     <a-light type="point" position="-1.457 5.5 1.3" light="distance:12;color:#fffffb" id="Living_Light3"></a-light>
     <a-light type="point" position="-1.457 5.5 1.5" light="distance:12;color:#fffffb" id="Living_Light4"></a-light>
 
