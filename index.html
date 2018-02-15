@@ -7,9 +7,11 @@
     <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v1.14.0/dist/aframe-extras.min.js"></script>
 </head>
 <body>
-<a-scene>
+<a-scene stats>
+
 
     <!---Camera Controls--->
+    <!---
         <a-camera universal-controls>
             <a-entity cursor="far: 150; objects: .intersectable" cursor geometry="primitive: ring; radiusOuter: 0.015;
                               radiusInner: 0.01; segmentsTheta: 32" material="color: #283644; shader: flat" position="0 0 -0.75"></a-entity>
@@ -59,8 +61,11 @@ src: url(images/carpet.jpg); repeat: 20 12"></a-entity>
 
 
     <!---Bed--->
-    <a-gltf-model src="assets/bed_agape/scene.gltf" position="21.241 -0.435 6.393"
-                  scale="0.025 0.025 0.025" gltf-model="assets/bed_agape/scene.gltf"></a-gltf-model>
+    <a-obj-model src="assets/bed.obj" mtl="assets/bed.mtl" position="21.829 1.114 6.363"
+                 scale="10 7 7" material=""></a-obj-model>
+
+    <a-gltf-model src="assets/wood_table/scene.gltf" position="23.939 0.026 2.757"
+                  scale="0.254 0.076 0.099" gltf-model="assets/wood_table/scene.gltf"></a-gltf-model>
 
     <!---Desk--->
     <a-gltf-model src="assets/wood_table/scene.gltf" position="10.24 0.269 0.005" scale="0.254 0.159 0.185"
