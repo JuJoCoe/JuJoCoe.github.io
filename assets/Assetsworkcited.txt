@@ -1,35 +1,23 @@
 
-
-
 Bedroom Assets:
-Oldtv: https://poly.google.com/view/7-dgp0L8elg
-Bed: https://sketchfab.com/models/96ed3f6ba55848809dfa8cd505edddae
-Alienware Laptop: https://sketchfab.com/models/a64ee2ad6d664196b339972119732c23#
+Bed: https://poly.google.com/view/bql5sqIiQNt
+Laptop: https://poly.google.com/view/csEfSvMgyOw
 Laptop Table: https://sketchfab.com/models/ce6977c9de1d43048838e4802e21f7d4#
 Alarm Clock: https://sketchfab.com/models/c8f10fc275894e088e451453a2cab667#
-Computer Chair: https://sketchfab.com/models/3ab97073cb804c928a53880cd00572a5#
 TV: https://poly.google.com/view/fsdm7OMqYLR
 Dresser: https://poly.google.com/view/3um_R3zPdkZ
+Door: https://poly.google.com/view/aQp17eqOPFn
 
 Kitchen Assets: 
-Stove: https://poly.google.com/view/2aKo4Mq-_5P
+Stove: https://sketchfab.com/models/11ec73f295a6445d93b6a212aacc021b
 Counters: https://sketchfab.com/models/5ea25911becc464aa234d9b03635438d#
 Microwave: https://poly.google.com/view/0YYExMzwX0V
 Fridge: https://sketchfab.com/models/2e6576fae0ea4034b09cd48722feb9a7#
 Chair: https://poly.google.com/view/d8m04hsV2lX
 
 Living Room:
-Fireplace: https://poly.google.com/view/fueH4_5W9Ug
 Couch/sectional seationg: https://sketchfab.com/models/7a7279d3ca644b16bd02ce9053c8d3b4#
 Black Sofa: https://sketchfab.com/models/312d1d36a2624d0594d282828f562d9e#
 Door(same as bedroom door): https://poly.google.com/view/aQp17eqOPFn
-
-Garage:
-Car: https://poly.google.com/view/dggOiBLYyuR
-
-
-Images:
-Grass: https://stockfresh.com/image/1041791/top-view-of-green-grass
-Asphalt: http://caliberpaving.com/reference-guide/asphalt-3/
-Lightbulb: 
 Lightswitch: https://poly.google.com/view/drzI0Tg_uKT
+Rooflamp: https://poly.google.com/view/1DkXcKunQT8
