@@ -7,10 +7,12 @@ Project 1 focusus on creating a human scale scene experienced from the 'inside o
 <a href="https://jujocoe.github.io/">Project 1 Interaction</a>
 Given the amount of unique objects in this project, the project may take some time to load all assets and may lag a little while it is loading all assets. 
 
-<a href="http://slides.com/jordancoe/deck/fullscreen">Project 1 Presentation</a>
+<a href="http://slides.com/jordancoe/project-1#/">Project 1 Presentation</a>
 
-<a href="http://slides.com/jordancoe/deck/fullscreen">Project 1 Demo Video</a>
+<a href="https://github.com/JuJoCoe/JuJoCoe.github.io/blob/master/demo_video/Project_1_Demo.mp4">Project 1 Demo Video mp4 file</a>
 This links to the raw file which you can download to view the demo.
+
+<a href="https://www.youtube.com/watch?v=fuZHbIO0vaQ&feature=youtu.be">Project 1 Demo Youtube</a>
 
 ### Instructions
 After clicking the Project 1 Interaction and allowing it to load all assets, you will be able to move around the room using wasd. You can turn your camera by using a mouse on computer, or by simply turning your head in VR. My project has no click action, instead it allows the user to place the cursor on an object and click after 1 second. For example, in the picture below the user hovers over the green box for 1 second, then the action will complete. 
