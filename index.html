@@ -11,12 +11,11 @@
 
 
     <!---Camera Controls--->
-
         <a-camera universal-controls>
-            <a-entity cursor="fuse: true; fuseTimeout: 10w00;"
+            <a-entity cursor="fuse: true; fuseTimeout: 1000;"
                       position="0 0 -1"
-                      geometry="primitive: ring; radiusOuter: 0.05; radiusInner: 0.02"
-                      material="color: white; shader: flat" >
+                      geometry="primitive: ring; radiusOuter: 0.03; radiusInner: 0.02"
+                      material="color: gray; shader: flat" >
             </a-entity>
         </a-camera>
 
@@ -115,10 +114,11 @@ src: url(images/carpet.jpg); repeat: 20 12"></a-entity>
     <a-obj-model id="door1" src="assets/door.obj" mtl="assets/door.mtl" position="8.038 -0.463 -9.936"
                  scale="0.013 0.013 0.04" material="" rotation="0 90 0" class="intersectable">
     </a-obj-model>
+    <!--- Open --->
     <a-box material="color:tomato;transparent:true;opacity:0" depth="3" height="6" width="1" position="8.038 -0.463 -9.936"
         event-set__1="_event: click; _target: #door1; position: 9.419 -0.463 -8.324;"
         event-set__2="_event: click; _target: #door1; rotation: 0 0 0;"></a-box>
-
+    <!--- Close --->
     <a-box material="color:tomato;transparent:true;opacity:0" depth="1" height="6" width="3" position="9.419 -0.463 -8.324"
            event-set__1="_event: click; _target: #door1; position: 8.038 -0.463 -9.936;"
            event-set__2="_event: click; _target: #door1; rotation: 0 90 0;"></a-box>
@@ -191,7 +191,7 @@ src: url(images/carpet.jpg); repeat: 20 12"></a-entity>
                   gltf-model="assets/wood_table/scene.gltf" rotation="0 90 0"></a-gltf-model>
 
 
-<!--- Lighting --->
+<!--- Ambient Lighting --->
     <a-light type="ambient" color="#222"></a-light>
 
 
@@ -208,26 +208,35 @@ src: url(images/carpet.jpg); repeat: 20 12"></a-entity>
     <a-light type="point" position="-1.457 5.5 1.5" light="distance:12;color:#fffffb" id="Living_Light4"></a-light>
 
             <!--- Light Switch --->
+    <!---OFF-->
     <a-obj-model src="assets/lightswitch.obj" mtl="assets/lightswitch.mtl"
                  position="7.43 1.666 -3.941" rotation="0 90 0" material=""></a-obj-model>
     <a-box id="box" material="color:tomato;transparent:true;opacity:0"
-           position="7.43 1.666 -3.941" height="1" depth="1" width="1"
+           position="7.43 1.666 -2.00" height="1" depth="1" width="1"
            event-set__1="_event: click; _target: #Living_Light1; distance: 0.01;"
            event-set__2="_event: click; _target: #Living_Light2; distance: 0.01;"
            event-set__3="_event: click; _target: #Living_Light3; distance: 0.01;"
            event-set__4="_event: click; _target: #Living_Light4; distance: 0.01;"></a-box>
 
+    <!---ON-->
     <a-obj-model src="assets/lightswitch.obj" mtl="assets/lightswitch.mtl"
                  position="7.43 1.666 -2.00" rotation="0 90 0" material=""></a-obj-model>
     <a-box id="box" material="color:tomato;transparent:true;opacity:0"
-           position="7.43 1.666 -2.00" height="1" depth="1" width="1"
+           position="7.43 1.666 -3.941" height="1" depth="1" width="1"
            event-set__1="_event: click; _target: #Living_Light1; distance: 12;"
            event-set__2="_event: click; _target: #Living_Light2; distance: 12;"
            event-set__3="_event: click; _target: #Living_Light3; distance: 12;"
            event-set__4="_event: click; _target: #Living_Light4; distance: 12;"></a-box>
 
+        <!--- ON-OFF SIGN --->
+    <a-entity static-body="" geometry="width:1.5;depth:0.95"
+              position="7.934 1.674 -2.951" material="roughness:1;src:images/on_off.png" rotation="0 90 0"></a-entity>
 
-    <!-- BEDROOM -->
+        <!--- Choose Color Sign --->
+    <a-entity static-body="" geometry="depth:0.95;width:1.5"
+              position="8.073 2.503 -5.093" material="roughness:1;src:images/choose_color.png" rotation="0 90 0"></a-entity>
+
+    <!-- BEDROOM LIGHTS -->
     <a-obj-model src="assets/rooflamp.obj" mtl="assets/rooflamp.mtl"
                  position="17.288 5.539 3.19" scale="1.5 1.5 1.5" material=""></a-obj-model>
     <a-light type="point" position="17.288 4.844 3.19" light="distance:12;color:#fffffb" id="Bed_Room1"></a-light>
@@ -240,18 +249,23 @@ src: url(images/carpet.jpg); repeat: 20 12"></a-entity>
     <!-- Desk Lamp -->
     <a-light type="point" position="10.056 2.122 -0.752" light="distance:4;color:#fffffb" id="Lamp_Light"></a-light>
 
+    <!---COLOR CHOOSER--->
+        <!---RED--->
     <a-box color="red" position="8.083 1.709 -3.500" scale="1 0.335 0.57"
            event-set__1="_event: click; _target: #Bed_Room1; color: red;"
            event-set__2="_event: click; _target: #Bed_Room2; color: red;"
            event-set__3="_event: click; _target: #Lamp_Light; color: red;"></a-box>
+        <!---BLUE--->
     <a-box color="blue" position="8.083 1.709 -4.500" scale="1 0.335 0.57"
            event-set__1="_event: click; _target: #Bed_Room1; color: blue;"
            event-set__2="_event: click; _target: #Bed_Room2; color: blue;"
            event-set__3="_event: click; _target: #Lamp_Light; color: blue;"></a-box>
+        <!---GREEN--->
     <a-box color="green" position="8.083 1.709 -5.500" scale="1 0.335 0.57"
         event-set__1="_event: click; _target: #Bed_Room1; color: green;"
         event-set__2="_event: click; _target: #Bed_Room2; color: green;"
         event-set__3="_event: click; _target: #Lamp_Light; color: green;"></a-box>
+        <!---WHITE--->
     <a-box color="white" position="8.083 1.709 -6.500" scale="1 0.335 0.57"
            event-set__1="_event: click; _target: #Bed_Room1; color: #fffffb;"
            event-set__2="_event: click; _target: #Bed_Room2; color: #fffffb;"
