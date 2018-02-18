@@ -77,6 +77,10 @@ src: url(images/carpet.jpg); repeat: 20 12"></a-entity>
     <!---Laptop--->
     <a-obj-model src="assets/laptop.obj" mtl="assets/laptop.mtl" position="10.915 1.292 0.709"
                  rotation="-90 0 0" scale="0.01 0.01 0.01" material=""></a-obj-model>
+        <!--- Startup --->
+    <a-box material="color:tomato;transparent:true;opacity:0" depth="2" height="2" width="2"
+           sound="src: url(assets/windows.wav); on: click" class="intersectable" position="10.915 1.292 0.709"></a-box>
+
 
     <!---Alarm Clock--->
     <a-gltf-model src="assets/alarm_clock/scene.gltf" position="22.867 0.438 3.519" rotation="0 -51.05053954615635 0" scale="4 4 4"
@@ -114,11 +118,16 @@ src: url(images/carpet.jpg); repeat: 20 12"></a-entity>
     <a-obj-model id="door1" src="assets/door.obj" mtl="assets/door.mtl" position="8.038 -0.463 -9.936"
                  scale="0.013 0.013 0.04" material="" rotation="0 90 0" class="intersectable">
     </a-obj-model>
+
     <!--- Open --->
     <a-box material="color:tomato;transparent:true;opacity:0" depth="3" height="6" width="1" position="8.038 -0.463 -9.936"
         event-set__1="_event: click; _target: #door1; position: 9.419 -0.463 -8.324;"
         event-set__2="_event: click; _target: #door1; rotation: 0 0 0;"></a-box>
+
+
+
     <!--- Close --->
+
     <a-box material="color:tomato;transparent:true;opacity:0" depth="1" height="6" width="3" position="9.419 -0.463 -8.324"
            event-set__1="_event: click; _target: #door1; position: 8.038 -0.463 -9.936;"
            event-set__2="_event: click; _target: #door1; rotation: 0 90 0;"></a-box>
