@@ -69,7 +69,8 @@ In conclusion, I think that this project was a good stepping stone into learing 
 - Created by Jordan Coe.
 
 ### Objects and Interactions
-19 Objects
+19 Unique Models
+
 <a href="https://github.com/JuJoCoe/JuJoCoe.github.io/blob/master/assets/Assetsworkcited.txt">Assets Used</a>
 
 4 Interactions
