@@ -68,4 +68,13 @@ In conclusion, I think that this project was a good stepping stone into learing 
 ### Contribution
 - Created by Jordan Coe.
 
+### Objects and Interactions
+19 Objects
 <a href="https://github.com/JuJoCoe/JuJoCoe.github.io/blob/master/assets/Assetsworkcited.txt">Assets Used</a>
+
+4 Interactions
+- The user may interact with the light switches in the living room. The on switch is on the left, while the off switch is on the right.
+- The dynamic object is the door. The user may open and close the door.
+- The choose your color boxes in the bedroom. The user can choose 1 of 4 colors, and all the lights inside the bedroom will match the color. 
+- When the user goes up to the laptop sitting on the desk, the laptop will make a startup sound. 
+
