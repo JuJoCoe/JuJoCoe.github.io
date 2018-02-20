@@ -1,31 +1,31 @@
 Bedroom Assets:
-Bed: https://poly.google.com/view/bql5sqIiQNt
-Laptop: https://poly.google.com/view/csEfSvMgyOw
-Laptop Table: https://sketchfab.com/models/ce6977c9de1d43048838e4802e21f7d4#
-Alarm Clock: https://sketchfab.com/models/c8f10fc275894e088e451453a2cab667#
-TV: https://poly.google.com/view/fsdm7OMqYLR
-Dresser: https://poly.google.com/view/3um_R3zPdkZ
-Door: https://poly.google.com/view/aQp17eqOPFn
-Couch: https://poly.google.com/view/7Q_Ab2HLll1
-DeskLamp: https://poly.google.com/view/0_FDq_UjWHp
-Chair(same as kitchen):
+1. Bed: https://poly.google.com/view/bql5sqIiQNt
+2. Laptop: https://poly.google.com/view/csEfSvMgyOw
+3. Laptop Table: https://sketchfab.com/models/ce6977c9de1d43048838e4802e21f7d4#
+4. Alarm Clock: https://sketchfab.com/models/c8f10fc275894e088e451453a2cab667#
+5. TV: https://poly.google.com/view/fsdm7OMqYLR
+6. Dresser: https://poly.google.com/view/3um_R3zPdkZ
+7. Door: https://poly.google.com/view/aQp17eqOPFn
+8. Couch: https://poly.google.com/view/7Q_Ab2HLll1
+9. DeskLamp: https://poly.google.com/view/0_FDq_UjWHp
+10. Chair(same as kitchen):
 
 Kitchen Assets: 
-Stove: https://sketchfab.com/models/11ec73f295a6445d93b6a212aacc021b
-Counters: https://sketchfab.com/models/5ea25911becc464aa234d9b03635438d#
-Microwave: https://poly.google.com/view/0YYExMzwX0V
-Fridge: https://sketchfab.com/models/2e6576fae0ea4034b09cd48722feb9a7#
-Chair: https://poly.google.com/view/d8m04hsV2lX
+11. Stove: https://sketchfab.com/models/11ec73f295a6445d93b6a212aacc021b
+12. Counters: https://sketchfab.com/models/5ea25911becc464aa234d9b03635438d#
+13. Microwave: https://poly.google.com/view/0YYExMzwX0V
+14. Fridge: https://sketchfab.com/models/2e6576fae0ea4034b09cd48722feb9a7#
+15. Chair: https://poly.google.com/view/d8m04hsV2lX
 Table(same as bedroom laptop table)
 
 Living Room:
 Tv(same as bedroom tv):
 Table(same as bedroom table):
-Couch/sectional seating: https://sketchfab.com/models/7a7279d3ca644b16bd02ce9053c8d3b4#
-Black Sofa: https://sketchfab.com/models/312d1d36a2624d0594d282828f562d9e#
+16. Couch/sectional seating: https://sketchfab.com/models/7a7279d3ca644b16bd02ce9053c8d3b4#
+17. Black Sofa: https://sketchfab.com/models/312d1d36a2624d0594d282828f562d9e#
 Door(same as bedroom door): https://poly.google.com/view/aQp17eqOPFn
-Lightswitch: https://poly.google.com/view/drzI0Tg_uKT
-Rooflamp: https://poly.google.com/view/1DkXcKunQT8
+18. Lightswitch: https://poly.google.com/view/drzI0Tg_uKT
+19. Rooflamp: https://poly.google.com/view/1DkXcKunQT8
 
 Images: 
 Texas Tech Basketball Poster: https://twitter.com/texastechmbb
